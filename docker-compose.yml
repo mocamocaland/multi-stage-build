@@ -1,0 +1,26 @@
+services:
+  django-multi:
+    build:
+      context: ./multi
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./multi:/app
+    environment:
+      - DJANGO_SETTINGS_MODULE=multi.settings
+      - PYTHONPATH=/app/multi
+    container_name: django_multi
+
+  django-simple:
+    build:
+      context: ./simple
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./simple:/app
+    environment:
+      - DJANGO_SETTINGS_MODULE=simple.settings
+      - PYTHONPATH=/app/simple
+    container_name: django_simple
