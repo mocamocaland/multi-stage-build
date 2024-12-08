@@ -1,6 +1,6 @@
 # multi-stage-build
 
-マルチステージビルドとシンプルなビルドをした場合の比較用のリポジトリ
+マルチステージビルドとシンプルなビルドでの比較用リポジトリ
 ```bash
 $ git clone git@github.com:mocamocaland/multi-stage-build.git
 $ cd multi-stage-build
